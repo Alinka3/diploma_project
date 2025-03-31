@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: auto 133px auto 158px;
+}
+/* Общие стили */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    padding: 0 20px;
+}
+.left-menu{
+   display: flex;
+   gap: 40px;
+}
+/* Логотип Meetup */
+.meetup-logo {
+    width: auto;
+    height: 32px;
+    
+}
+
+/* Основной блок поиска */
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 42px;
+    
+}
+
+/* Поле ввода для поиска */
+.search-input {
+    width: 298px;
+    height: 100%;
+    border: none;
+    padding: 0 10px;
+}
+
+/* Разделительная пунктирная линия */
+.divider {
+    width: 1px;
+    height: 60%;
+    border-right: 1px dashed #aaa;
+}
+
+/* Поле ввода для локации */
+.location-input {
+    width: 254px;
+    height: 100%;
+    border: none;
+    padding: 0 10px;
+}
+
+/* Кнопка поиска */
+.search-button {
+    width: 42px;
+    height: 42px;
+    background-color: #F65858;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Меню справа */
+.right-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+/* Языковая панель */
+.language {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Иконка глобуса */
+.globe-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Кнопки входа и регистрации */
+.login {
+    text-decoration: none;
+    color: black;
+}
+
+.signup {
+    background-color: #00798A;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+/* майн */
+h2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+.subheading {
+    font-size: 20px;
+    font-weight: 500;
+    color: #00798A;
+    margin: 10px;
+    text-decoration: underline;
+}
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.filter {
+    background: #f5f5f5;
+    padding: 10px 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+.event {
+    display: flex;
+    align-items: center;
+    width: 604px;
+    height: 105px;
+    
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 5px;
+}
+.event img {
+    width: 159.11px;
+    height: 89.72px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+.event-details {
+    display: flex;
+    flex-direction: column;
+}
+.event-date {
+    font-weight: 500;
+    font-size: 14px;
+    color: #7C6F50;
+    text-transform: uppercase;
+}
+.event-title {
+    font-weight: 500;
+    font-size: 16px;
+}
+.event-category {
+    font-weight: 500;
+    font-size: 14px;
+    color: #707070;
+}
+.event-attendees {
+    font-weight: 400;
+    font-size: 14px;
+    color: #707070;
+    margin-top: 35px;
+}
+.event-attendees span{
+    color: red;
+}
+
+.map {
+   display: flex;
+   flex-direction: column;
+   text-align: left;
+}
+.title {
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 4px;
+   
+}
+.location {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+.map-container {
+    position: relative;
+    width: 350px;
+    height: 285px;
+    background: url('img2/map-thumbnail.png.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 20px;
+    height: 20px;
+    background: url('img2/Х.svg') no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+    
+}
+.browse-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 172px;
+    height: 40px;
+    background: url('img2/Button.svg') no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+}
+footer {
+    background: #181818;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 24px;
+    border-bottom: 2px solid #333;
+    size: 16px;
+}
+.footer-section p {
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+}
+.footer-column h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.footer-column p {
+    margin: 5px 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+}
+.footer-social-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #333;
+}
+.footer-social {
+    display: flex;gap: 15px;
+    flex-direction: column;
+}
+.footer-social img {
+    width: 24px;
+    height: 24px;
+}
+.store-badges img {
+    height: 40px;
+    margin-left: 10px;
+}
+.footer-button {
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    background: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+}
+.footer-bottom-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: nowrap;
+}

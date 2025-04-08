@@ -34,80 +34,120 @@
     <main>
         <h2>Events near New York, NY</h2>
         <div class="subheading">Events</div>
-            <div class="filters">
-                <div class="filter">Any type ▼</div>
-                <div class="filter">Any distance ▼</div>
-                <div class="filter">Any category ▼</div>
+        
+        <div class="filters">
+            <div class="filter">
+                <select id="typeFilter">
+                    <option value="">Any type ▼</option>
+                    <option value="online">Online</option>
+                    <option value="offline">Offline</option>
+                </select>
             </div>
-    <div class="container">
-        <div class="events">
-            <div class="event">
-                <img src="img2/1.png" alt="Event 1">
-                <div class="event-details">
-                    <div class="event-date">Wed, Mar 13 · 11:30 PM UTC</div>
-                    <div class="event-title">All Nations - Manhattan Missions Church Bible Study</div>
-                    <div class="event-category">Hobbies and Passions (5 km)</div>
-                    <div class="event-attendees"></div>
-                </div>
+            <div class="filter">
+                <select id="distanceFilter">
+                    <option value="">Any distance ▼</option>
+                    <option value="5">5 km</option>
+                   
+        
+                    <option value="10">10 km</option>
+                    <option value="15">15 km</option>
+                    <option value="25">25 km</option>
+                    <option value="50">50 km</option>
+                    <option value="75">75 km</option>
+                    <option value="100">100 km</option>
+                </select>
             </div>
-            <div class="event">
-                <img src="img2/2.png" alt="Event 2">
-                <div class="event-details">
-                    <div class="event-date">Sat, Mar 23 · 3:00 PM UTC</div>
-                    <div class="event-title">INFJ Personality Type - Coffee Shop Meet & Greet</div>
-                    <div class="event-category">Hobbies and Passions (25 km)</div>
-                    <div class="event-attendees">99 attendees</div>
-                </div>
-            </div>
-            <div class="event">
-                <img src="img2/3.png" alt="Event 3">
-                <div class="event-details">
-                    <div class="event-date">Wed, Mar 13 · 11:30 PM UTC</div>
-                    <div class="event-title">NYC AI Users - AI Tech Talks, Demo & Social: RAG
-                        Search and Customer Experience</div>
-                    <div class="event-category">Technology (50 km)</div>
-                    <div class="event-attendees">43 attendees <span>2 spots left</span></div>
-                </div>
-            </div>
-            <div class="event">
-                <img src="img2/4.png" alt="Event 4">
-                <div class="event-details">
-                    <div class="event-date">Wed, Mar 13 · 11:30 PM UTC</div>
-                    <div class="event-title">Book 40+ Appointments Per Month Using AI and
-                        Automation</div>
-                    <div class="event-category">Technology</div>
-                    <div class="event-attendees"></div>
-                </div>
-            </div>
-            <div class="event">
-                <img src="img2/5.png" alt="Event 5">
-                <div class="event-details">
-                    <div class="event-date">Wed, Mar 13 · 11:00 PM UTC</div>
-                    <div class="event-title">Dump writing group weekly meetup</div>
-                    <div class="event-category">Hobbies and Passions</div>
-                    <div class="event-attendees">77 attendees</div>
-                </div>
-            </div>
-            <div class="event">
-                <img src="img2/6.png" alt="Event 6">
-                <div class="event-details">
-                    <div class="event-date">Thu, Mar 14 · 11:00 PM UTC</div>
-                    <div class="event-title">Over 40s, 50s, & 60s Senior Singles Chat, Meet &
-                        Dating Community</div>
-                    <div class="event-category">Hobbies and Passions</div>
-                    <div class="event-attendees">140 attendees</div>
-                </div>
+            <div class="filter">
+                <select id="categoryFilter">
+                    <option value="">Any category ▼</option>
+                    <option value="Social Activities">Social Activities</option>
+                    <option value="Hobbies and Passions">Hobbies and Passions</option>
+                    <option value="Health and Wellbeing">Health and Wellbeing</option>
+                    <option value="Business">Business</option>
+                    <option value="Technology">Technology</option>
+                </select>
             </div>
         </div>
-        <div class="map">
+        
+      
+        <div class="container">
+          <div class="events">
+            <!-- Event Card 1 -->
+            <div class="event">
+              <img src="img2/1.png" alt="Event 1" />
+              <div class="event-details">
+                <div class="event-date">Wed, Mar 13 · 11:30 PM UTC</div>
+                <div class="event-title">All Nations - Manhattan Missions Church Bible Study</div>
+                <div class="event-category">Hobbies and Passions (5 km)</div>
+              </div>
+            </div>
+      
+            <!-- Event Card 2 -->
+            <div class="event">
+              <img src="img2/2.png" alt="Event 2" />
+              <div class="event-details">
+                <div class="event-date">Sat, Mar 23 · 3:00 PM UTC</div>
+                <div class="event-title">INFJ Personality Type - Coffee Shop Meet & Greet</div>
+                <div class="event-category">Hobbies and Passions (25 km)</div>
+                <div class="event-attendees">99 attendees</div>
+              </div>
+            </div>
+      
+            <!-- Event Card 3 -->
+            <div class="event">
+              <img src="img2/3.png" alt="Event 3" />
+              <div class="event-details">
+                <div class="event-date">Wed, Mar 13 · 11:30 PM UTC</div>
+                <div class="event-title">NYC AI Users - AI Tech Talks, Demo & Social: RAG Search and Customer Experience</div>
+                <div class="event-category">Technology (50 km)</div>
+                <div class="event-attendees">43 attendees <span style="color:red;">· 2 spots left</span></div>
+              </div>
+            </div>
+      
+            <!-- Event Card 4 -->
+            <div class="event">
+              <img src="img2/4.png" alt="Event 4" />
+              <div class="event-details">
+                <div class="event-date">Wed, Mar 13 · 11:30 PM UTC</div>
+                <div class="event-title">Book 40+ Appointments Per Month Using AI and Automation</div>
+                <div class="event-category">Technology</div>
+              </div>
+            </div>
+      
+            <!-- Event Card 5 -->
+            <div class="event">
+              <img src="img2/5.png" alt="Event 5" />
+              <div class="event-details">
+                <div class="event-date">Wed, Mar 13 · 11:00 PM UTC</div>
+                <div class="event-title">Dump writing group weekly meetup</div>
+                <div class="event-category">Hobbies and Passions</div>
+                <div class="event-attendees">77 attendees</div>
+              </div>
+            </div>
+      
+            <!-- Event Card 6 -->
+            <div class="event">
+              <img src="img2/6.png" alt="Event 6" />
+              <div class="event-details">
+                <div class="event-date">Thu, Mar 14 · 11:00 PM UTC</div>
+                <div class="event-title">Over 40s, 50s, & 60s Senior Singles Chat, Meet & Dating Community</div>
+                <div class="event-category">Hobbies and Passions</div>
+                <div class="event-attendees">140 attendees</div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="map">
             <div class="title">Find events near</div>
             <div class="location">New York, NY</div>
             <div class="map-container">
-                <div class="close-btn"></div>
-                <div class="browse-btn"></div>
+              <div class="close-btn"></div>
+              <div class="browse-btn"></div>
+            </div>
+          </div>
         </div>
-    </div>
-    </main>
+      </main>
+      
     <footer>
         <div class="footer-container">
             <!-- Первый блок -->
@@ -177,5 +217,6 @@
             </div>
         </div>
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>

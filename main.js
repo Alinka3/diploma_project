@@ -6,18 +6,39 @@ document.addEventListener("DOMContentLoaded", function () {
   const events = document.querySelectorAll(".event");
 
   function filterEvents() {
-    const typeVal = typeFilter.value.toLowerCase();
-    const distanceVal = distanceFilter.value;
-    const categoryVal = categoryFilter.value.toLowerCase();
+    const selectedType = typeFilter.value.toLowerCase();
+    const selectedDistance = distanceFilter.value;
+    const selectedCategory = categoryFilter.value.toLowerCase();
 
     events.forEach(event => {
-      const categoryText = event.querySelector(".event-category")?.textContent.toLowerCase() || '';
+      const typeEl = event.querySelector(".event-type");
+      const categoryEl = event.querySelector(".event-category");
 
-      const matchesType = !typeVal || categoryText.includes(typeVal);
-      const matchesDistance = !distanceVal || categoryText.includes(`(${distanceVal} km)`);
-      const matchesCategory = !categoryVal || categoryText.includes(categoryVal);
+      if (!typeEl || !categoryEl) {
+        event.style.display = "none";
+        return;
+      }
 
-      if (matchesType && matchesDistance && matchesCategory) {
+      const eventType = typeEl.textContent.trim().toLowerCase();
+      const fullCategory = categoryEl.textContent.trim();
+
+      // Разделим на категорию и дистанцию
+      let eventCategory = fullCategory;
+      let eventDistance = "";
+
+      const match = fullCategory.match(/^(.+?)\s*\((\d+)\s*km\)$/);
+      if (match) {
+        eventCategory = match[1].trim();
+        eventDistance = match[2].trim();
+      }
+
+      eventCategory = eventCategory.toLowerCase();
+
+      const matchesType = !selectedType || eventType === selectedType;
+      const matchesCategory = !selectedCategory || eventCategory === selectedCategory;
+      const matchesDistance = !selectedDistance || eventDistance === selectedDistance;
+
+      if (matchesType && matchesCategory && matchesDistance) {
         event.style.display = "flex";
       } else {
         event.style.display = "none";
@@ -29,6 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
   distanceFilter.addEventListener("change", filterEvents);
   categoryFilter.addEventListener("change", filterEvents);
 });
+
+
+
+
 
 
 
